@@ -8,20 +8,20 @@ public class StoreController {
     ArrayList<SmartPhoneModel> phoneList = new ArrayList<>();
 
     public void addNewProduct() {
-        System.out.println("Enter Model Code: \n");
+        System.out.println("Enter Model Code: ");
         int mCode = sc.nextInt();
         sc.nextLine();
-        System.out.println("Enter Model Name: \n");
+        System.out.println("Enter Model Name: ");
         String mName = sc.nextLine();
-        System.out.println("Enter Quantity: \n");
+        System.out.println("Enter Quantity: ");
         int Qty = sc.nextInt();
-        sc.nextInt();
-        System.out.println("Enter Price: \n");
+        sc.nextLine();
+        System.out.println("Enter Price: ");
         float price = sc.nextFloat();
-        sc.nextInt();
-        System.out.println("Enter Operating System: \n");
+        sc.nextLine();
+        System.out.println("Enter Operating System: ");
         String os = sc.nextLine();
-        System.out.println("Enter Connectivity: \n");
+        System.out.println("Enter Connectivity: ");
         String conn = sc.nextLine();
 
         //Creating a Object
@@ -32,7 +32,7 @@ public class StoreController {
     }
 
     public void deleteProduct() {
-        System.out.println("Enter Model Code: \n");
+        System.out.println("Enter Model Code: ");
         int mCode = sc.nextInt();
         sc.nextLine();
 
@@ -58,7 +58,7 @@ public class StoreController {
 
     //Update product code
     public void updateProduct() {
-        System.out.println("Enter Model Code: \n");
+        System.out.println("Enter Model Code: ");
         int mCode = sc.nextInt();
         sc.nextLine();
 
@@ -68,7 +68,7 @@ public class StoreController {
 
         boolean found = false;
 
-        for (int i = 1; i < phoneList.size(); i++) {
+        for (int i = 0; i < phoneList.size(); i++) {
             if (phoneList.get(i).getModelCode() == mCode) {
 
                 //model code found now what to update
@@ -89,27 +89,27 @@ public class StoreController {
 
                     switch (choice) {
                         case (1):
-                            System.out.println("Enter Model Name:\n");
+                            System.out.println("Enter Model Name:");
                             String mName = sc.nextLine();
                             phoneList.get(i).setModelName(mName);
                         break;
                         case (2):
-                            System.out.println("Enter Model Quantity:\n");
+                            System.out.println("Enter Model Quantity:");
                             int mQyt = sc.nextInt();
                             phoneList.get(i).setModelQty(mQyt);
                         break;
                         case (3):
-                            System.out.println("Enter Model Price:\n");
+                            System.out.println("Enter Model Price:");
                             float mPrice = sc.nextFloat();
                             phoneList.get(i).setModelPrice(mPrice);
                         break;
                         case (4):
-                            System.out.println("Enter Model Operating System:\n");
+                            System.out.println("Enter Model Operating System:");
                             String mOS = sc.nextLine();
                             phoneList.get(i).setOS(mOS);
                         break;
                         case (5):
-                            System.out.println("Enter Model Connectivity:\n");
+                            System.out.println("Enter Model Connectivity:");
                             String mConn = sc.nextLine();
                             phoneList.get(i).setConnectivity(mConn);
                         break;
